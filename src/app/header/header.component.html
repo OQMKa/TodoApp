@@ -1,1 +1,13 @@
-<p>header works!</p>
+<header>
+    <nav class="custom-navbar">
+        <div class="brand"><a href="localhost:4200">allTodos</a></div>
+        <ul class="nav-links left-links">
+            <li><a *ngIf="hardcoded.isUserLoggedIn()" routerLink="/welcome">Home</a></li>
+            <li><a *ngIf="hardcoded.isUserLoggedIn()" routerLink="/listtodo">Todos</a></li>
+        </ul>
+        <ul class="nav-links right-links">
+            <li><a *ngIf="!hardcoded.isUserLoggedIn()" routerLink="/login">Login</a></li>
+            <li><a *ngIf="hardcoded.isUserLoggedIn()" routerLink="logout">Logout</a></li>
+        </ul>
+    </nav>
+</header>
