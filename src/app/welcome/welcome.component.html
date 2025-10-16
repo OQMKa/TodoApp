@@ -1,0 +1,16 @@
+<body>
+    <div>
+        <p>welcome works!</p>
+    </div>
+     
+    <div>
+        <BUtton (click)="gotoToDosManager()">click here to visit your todo's..</BUtton>
+    </div>
+    <div class="container">Click here to get the customized werlcome button.
+        <button (click)="getWelcomeMessage()" class="btn btn-success">Button</button>
+    </div>
+    <div class="container" *ngIf="getWelcomeMessage()">
+        <h3>Your customized helloWorldBean Message.</h3>
+        <!-- <button (click)="getWelcomeMessage()" class="btn btn-success">Button</button> -->
+    </div>
+</body>
