@@ -10,6 +10,7 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { ErrorComponent } from './error/error.component';
 import { ErrorpageComponent } from './errorpage/errorpage.component';
+import { ListTodoComponent } from './list-todo/list-todo.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { ErrorpageComponent } from './errorpage/errorpage.component';
     HeaderComponent,
     FooterComponent,
     ErrorComponent,
-    ErrorpageComponent
+    ErrorpageComponent,
+    ListTodoComponent
   ],
   imports: [
     BrowserModule,

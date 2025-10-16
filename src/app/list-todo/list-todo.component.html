@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <link rel="stylesheet" href="list-todo.component.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>My Todo List</h1>
+            <p>Manage your tasks efficiently</p>
+        </div>
+
+        <div class="table-container">
+            <table class="todo-table">
+                <thead>
+                    <tr>
+                        <th>No.</th>
+                        <th>Task</th>
+                        <th>Status</th>
+                        <th>Priority</th>
+                        <th>Due Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let todo of todos">
+                        <td>{{todo.NO}}</td>
+                        <td>{{todo.TASK}}</td>
+                        <td><span class="status pending">{{todo.STATUS}}</span></td>
+                        <td><span class="priority high">{{todo.PRIORITY}}</span></td>
+                        <td>{{todo.DUE_DATE|date|lowercase}}</td>
+                    </tr>
+                    <!-- <tr>
+                        <td>2</td>
+                        <td>Go play Badminton</td>
+                        <td><span class="status pending">pending</span></td>
+                        <td><span class="priority medium">Medium</span></td>
+                        <td>2025-10-13</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Go have a cofee!</td>
+                        <td><span class="pending">pending</span></td>
+                        <td><span class="priority low">Low</span></td>
+                        <td>2025-10-20</td>
+                    </tr> -->
+                    
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
