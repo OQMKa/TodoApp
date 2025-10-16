@@ -1,0 +1,46 @@
+/* --- Navbar Container --- */
+.custom-navbar {
+    display: flex; /* Arrange items horizontally */
+    align-items: center; /* Vertically center items */
+    padding: 0 1rem;
+    background-color: #343a40; /* Dark background color (like Bootstrap's bg-dark) */
+    color: white;
+    height: 56px; /* Typical navbar height */
+}
+
+/* --- Brand/Logo --- */
+.custom-navbar .brand a {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: white;
+    text-decoration: none; /* Remove underline from the link */
+    margin-right: 1.5rem;
+}
+
+/* --- Navigation Links (ULs) --- */
+.custom-navbar .nav-links {
+    list-style: none; /* Remove bullets */
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.custom-navbar .nav-links li {
+    padding: 0 0.5rem;
+}
+
+.custom-navbar .nav-links li a {
+    color: rgba(255, 255, 255, 0.55); /* Lighter link color */
+    text-decoration: none;
+    padding: 0.5rem 0.5rem; /* Add padding for click area */
+    display: block; /* Make the whole padding area clickable */
+}
+
+.custom-navbar .nav-links li a:hover {
+    color: white; /* Highlight on hover */
+}
+
+/* --- Pushing the Right Links to the End --- */
+.custom-navbar .right-links {
+    margin-left: auto; /* Pushes the element to the far right */
+}
