@@ -4,10 +4,10 @@ import {HttpClient} from '@angular/common/http';
   providedIn: 'root'
 })
 export class WelcomeDataService {
-
   constructor(private httpClient:HttpClient) { }
   executeHelloWorldBeanService(){
-    return this.httpClient.get('http://localhost:8080/hello-world-bean');
+    // return this.httpClient.get('http://localhost:8080/hello-world-bean/users/Saima');
+    console.log("execute Hello World bean Service");
   }
   
 }

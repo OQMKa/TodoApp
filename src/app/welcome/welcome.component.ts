@@ -8,12 +8,13 @@ import {  WelcomeDataService } from '../service/data/welcome-data.service';
 })
 export class WelcomeComponent {
 constructor(private router: Router,
-    private welcomeDataService: WelcomeDataService
+    private service: WelcomeDataService
   ) {
 
   }
   getWelcomeMessage() {
-    this.welcomeDataService.executeHelloWorldBeanService().subscribe();
+    // this.welcomeDataService.executeHelloWorldBeanService()-.subscribe();
+    this.service.executeHelloWorldBeanService();
   }
 
   gotoToDosManager() {
