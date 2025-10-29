@@ -1,0 +1,196 @@
+/* ==================== Reset ==================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ==================== Layout ==================== */
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+    background-color: #764ba2;
+    background-image: linear-gradient(135deg, #764ba2 0%, #3300ff 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    line-height: 1.6;
+}
+
+.container {
+    width: 100%;
+    max-width: 520px;
+}
+
+/* ==================== Card ==================== */
+.card {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.92) 100%);
+    border-radius: 1rem;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3), 0 8px 16px rgba(0, 0, 0, 0.2);
+    padding: clamp(2rem, 5vw, 3rem);
+    backdrop-filter: blur(10px);
+}
+
+.card-header {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.card-title {
+    font-size: clamp(1.75rem, 5vw, 2.25rem);
+    font-weight: 600;
+    color: #2d1b4e;
+    margin-bottom: 0.5rem;
+}
+
+.card-subtitle {
+    font-size: clamp(0.875rem, 2.5vw, 1rem);
+    color: #6b5b7a;
+    font-weight: 400;
+}
+
+/* ==================== Form ==================== */
+.todo-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+fieldset,
+.form-group {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+.form-label,
+fieldset label {
+    display: block;
+    font-size: 0.9375rem;
+    font-weight: 500;
+    color: #2d1b4e;
+    margin-bottom: 0.5rem;
+}
+
+.form-control {
+    width: 100%;
+    padding: 0.875rem 1rem;
+    border: 2px solid #e0d7e8;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-family: inherit;
+    background-color: #ffffff;
+    color: #2d1b4e;
+    transition: all 0.2s ease;
+}
+
+.form-control:hover {
+    border-color: #c4b5d4;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: #764ba2;
+    box-shadow: 0 0 0 3px rgba(118, 75, 162, 0.1);
+}
+
+.form-control::placeholder {
+    color: #a599b3;
+}
+
+/* Date input specific styles */
+.form-control[type="date"] {
+    appearance: none;
+    -webkit-appearance: none;
+    cursor: pointer;
+}
+
+.form-control[type="date"]::-webkit-calendar-picker-indicator {
+    cursor: pointer;
+    opacity: 0.6;
+    transition: opacity 0.2s ease;
+}
+
+.form-control[type="date"]::-webkit-calendar-picker-indicator:hover {
+    opacity: 1;
+}
+
+/* ==================== Buttons ==================== */
+.form-actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+.btn {
+    padding: 0.875rem 1.75rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    font-family: inherit;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-align: center;
+    flex: 1;
+}
+
+.btn:focus {
+    outline: 3px solid #2d1b4e;
+    outline-offset: 2px;
+}
+
+.btn:active {
+    transform: translateY(0);
+}
+
+.btn-success {
+    background: linear-gradient(135deg, #764ba2 0%, #3300ff 100%);
+    color: #ffffff;
+}
+    
+.btn-success:hover {
+    background: linear-gradient(135deg, #3300ff 0%, #a270ce 100%);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(118, 75, 162, 0.3);
+}
+
+.btn-secondary {
+    background-color: #f8f4fb;
+    color: #1b0e89;
+    border: 2px solid #e0d7e8;
+}
+
+.btn-secondary:hover {
+    background-color: #e0d7e8;
+    border-color: #c4b5d4;
+    transform: translateY(-1px);
+}
+
+/* ==================== Responsive ==================== */
+@media (max-width: 480px) {
+    body {
+        padding: 1rem;
+    }
+
+    .card {
+        padding: 1.5rem;
+    }
+
+    .form-actions {
+        flex-direction: column;
+    }
+
+    .btn {
+        width: 100%;
+    }
+}
+
+/* ==================== Accessibility ==================== */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation: none !important;
+        transition: none !important;
+    }
+}

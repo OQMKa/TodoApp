@@ -69,7 +69,7 @@ body {
 
 .todo-table tbody tr {
     border-bottom: 1px solid #e0e0e0;
-    transition: background 0.2s;
+    transition: background0.2s;
 }
 
 .todo-table tbody tr:hover {
@@ -155,4 +155,8 @@ body {
     .todo-table th:first-child {
         width: 50px;
     }
+    .clickable-item {
+    cursor: pointer;
+  }
+
 }

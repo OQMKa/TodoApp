@@ -1,0 +1,69 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Tasks - TODO Manager</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/todo.component.css">
+</head>
+
+<body>
+    <main class="card">
+        <header class="card-header">
+            <h1 class="card-title">Update Tasks</h1>
+            <p class="card-subtitle">Organize and manage your daily activities</p>
+        </header>
+
+        <form class="add-task-form" action="#" method="post">
+            <div class="form-row">
+                <label for="task-input" class="visually-hidden">New task description</label>
+                <input type="text" id="task-input" class="form-input" placeholder="Enter a new task..." name="task"
+                    autocomplete="off">
+                <button type="submit" class="btn-add" aria-label="Add new task">
+                    Add Task
+                </button>
+            </div>
+        </form>
+
+        <ul class="todo-list">
+            <li class="todo-item">
+                <input type="checkbox" id="task-1" class="todo-checkbox" name="task-1">
+                <fieldset>
+                    <label>Description</label>
+                    <input type="text" [(ngModel)]="todo.description" name="description"class=form-control name="description">
+                </fieldset>
+                
+            </li>
+
+            <li class="todo-item">
+        </ul>
+    </main>
+</body>
+
+</html> -->
+<h1>Todo</h1>
+
+<body>
+    <div class="container">
+        <fieldset>
+            <label>Description</label>
+            <input type="text" [(ngModel)]="todo.description" name="description" class=form-control name="description">
+        </fieldset>
+        <fieldset class="form-group">
+            <label> Target Date </label>
+            <input type="date" 
+            [ngModel]="todo.targetDate | date :'yyyy-MM-dd' " 
+            (ngModelChange)=" todo.targetDate=$event "
+            name="targetDate" class="form-control">
+            <br>
+            <br>
+        </fieldset>
+        <div>
+            <button class="btn btn-success" (click)="saveTodo()">Save & Continue</button>
+        </div>
+    </div>
+</body>

@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Todo List</title>
     <link rel="stylesheet" href="list-todo.component.css">
 </head>
+
 <body>
+    <div class="container" *ngIf="deleteSuccessMessage">{{deleteSuccessMessage}}</div>
+
     <div class="container">
         <div class="header">
             <h1>My Todo List</h1>
@@ -17,20 +21,24 @@
             <table class="todo-table">
                 <thead>
                     <tr>
-                        <th>No.</th>
-                        <th>Task</th>
+                        <th>Id.</th>
+                        <th>Descrirption            </th>
                         <th>Status</th>
                         <th>Priority</th>
                         <th>Due Date</th>
+                        <th>Update</th>
+                        <th>Delete</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr *ngFor="let todo of todos">
-                        <td>{{todo.NO}}</td>
-                        <td>{{todo.TASK}}</td>
-                        <td><span class="status pending">{{todo.STATUS}}</span></td>
-                        <td><span class="priority high">{{todo.PRIORITY}}</span></td>
-                        <td>{{todo.DUE_DATE|date|lowercase}}</td>
+                        <td>{{todo.id}}</td>
+                        <td>{{todo.description}}</td>
+                        <td><span class="status pending">{{todo.done? "completed":"Pending"}}</span></td>
+                        <td><span>{{todo.priority}}</span></td>
+                        <td>{{todo.targetDate|date|lowercase}}</td>
+                        <td><button (click)="updateTodo(todo.id)" class="clickable-item" pointer="pointer" class="btn btn-success">Update</button></td>
+                        <td><button (click)="deleteTodo(todo.id)" class="clickable-item" pointer="pointer">Delete</button></td>
                     </tr>
                     <!-- <tr>
                         <td>2</td>
@@ -46,10 +54,11 @@
                         <td><span class="priority low">Low</span></td>
                         <td>2025-10-20</td>
                     </tr> -->
-                    
+
                 </tbody>
             </table>
         </div>
     </div>
 </body>
+
 </html>

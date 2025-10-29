@@ -7,6 +7,7 @@ import { routeGuard } from './service/route-guard.service';
 import { ErrorpageComponent } from './errorpage/errorpage.component';
 import { ErrorComponent } from './error/error.component';
 import { LogoutComponent } from './logout/logout.component';
+import { TodoComponent } from './todo/todo.component';
 
 const routes: Routes = [
     { path: '', component: LoginComponent },
@@ -16,6 +17,7 @@ const routes: Routes = [
   { path: 'wrongURL', component: ErrorpageComponent },
   { path: "error", component: ErrorComponent },
   { path: "logout", component: LogoutComponent, canActivate: [routeGuard] },
+  { path: "todos/:id", component: TodoComponent, canActivate: [routeGuard] },
   { path: "**", component: ErrorpageComponent }
 ];
 

@@ -13,6 +13,7 @@ import { ErrorpageComponent } from './errorpage/errorpage.component';
 import { ListTodoComponent } from './list-todo/list-todo.component';
 import { LogoutComponent } from './logout/logout.component';
 import { HttpClientModule } from '@angular/common/http';
+import { TodoComponent } from './todo/todo.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { HttpClientModule } from '@angular/common/http';
     ErrorComponent,
     ErrorpageComponent,
     ListTodoComponent,
-    LogoutComponent
+    LogoutComponent,
+    TodoComponent
   ],
   imports: [
     BrowserModule,
