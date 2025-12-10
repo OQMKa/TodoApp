@@ -31,7 +31,7 @@ updateTodo(id: any) {
   }
 
   refreshTodos() {
-    this.todoService.retrieveAllTodos('Om').subscribe( //hardcoded username 
+    this.todoService.retrieveAllTodos('om').subscribe( //hardcoded username 
       response => {
         this.todos = response;
         console.log(response);
@@ -41,9 +41,11 @@ updateTodo(id: any) {
   deleteTodo(id: any) {
     console.log(`delete todo ${id}`);
     this.todoService.deleteTodo("om", id).subscribe(
-      response => console.log(response));
-    this.deleteSuccessMessage = `Delete of todo ${id} Successful!`;
-    this.refreshTodos(); 
+      response => {console.log(response);
+          this.deleteSuccessMessage = `Delete of todo ${id} Successful!`;
+          this.refreshTodos(); 
+      }
+    )
   }
 
 
